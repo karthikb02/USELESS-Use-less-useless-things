@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Reset Password</title>
+	<link rel="icon" href="sellingPageBg.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel="stylesheet" type="text/css" href="static/style.css?q=9872285">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body>
+  <div class="loginbox">
+  <img src="static/forget.png" class="Avatar">
+      <h1 style="font-size:25px;"><b>RESET PASSWORD</b></h1>
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h6 style="color:red;font-size:15px">{{ message }}</h6>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+      <form action="resetPopup.html" method="POST">
+           <p>E-Mail ID</p>
+           <input type="text" type="text" placeholder="Enter E-Mail Id" required name="userName">
+           <p>New Password</p>
+           <input type="password" type="text" placeholder="Enter New Password" required name="newPass" onclick="myFunction()" >
+          <p>Confirm New Password</p>
+          <input type="password" type="text" placeholder="Confirm New Password" required name="confirmNewPass">
+           <input type="submit" name="" value="Reset">
+       </form> 
+      <script>
+      function myFunction() {
+      alert("Use 8 or more characters with a mix of letters(atleast one upper and lower case alphabets),numbers & symbols");
+      }
+     </script>
+     </div> 
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

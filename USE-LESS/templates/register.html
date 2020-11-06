@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>USE-LESS Register</title>
+	<link rel="icon" href="sellingPageBg.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" type="text/css" href="static/stylereg.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="registerbox">
+    <img src="static/signup%20avatar.png" class="avatar">
+        <h1><b>Register Here</b></h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h6 style="color:red;font-size:12px">{{ message }}</h6>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/popupreg.html" method="POST">
+            <p>User Name</p>
+            <input type="text" type="text" required name="name" placeholder="Eg.John">
+            <p>Email Id</p>
+            <input type="email" type="text" required name="email" placeholder="Eg.john123@gmail.com">
+            <p>Password</p>
+            <input type="password" type="text" required name="password" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onclick="myFunction()" required>
+            <br>
+            <p>Confirm Password</p>
+            <input type="password" type="text" required name="conPass" placeholder="confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            <br>
+            <p>Phone Number</p>
+            <input type="tel" id="phone" required name="phone" placeholder="9876543210" pattern="[0-9]{10}" required>
+            <p>Address</p>
+            <textarea type="text" type="text" required name="address" placeholder="Enter your address" style="margin: 0px;width: 290px;height: 108px; color: black; background: transparent;border-color: black; font-size: 18"></textarea>
+            <br>
+            <br>
+            <p>Postal code</p>
+            <input type="tel" id="phone" required name="code" placeholder="123456" pattern="[0-9]{6}" required>
+            <div class="inputfield terms">
+            <label class="check">
+            <input type="checkbox" type="checkbox" required name="tick" style="height: 20px; width:20px;">
+            <span class="checkmark"></span>
+            </label>
+                <p style="margin-top: - 6;margin-left: 30px;margin-top: -40;">Agree to terms and conditions
+                 <a href="static/terms%20and%20conditions.pdf">
+                 <i class="fa fa-info-circle w3-large" style="padding-left: 260px;margin-top: -18;"></i></a>
+                </p>
+            </div> 
+            <br>
+            <input type="submit" name="" value="Register"> 
+            <a href="login.html"><p>Already have an account?</p></a>   
+        </form>
+        <script>
+        function myFunction() {
+         alert("Use 8 or more characters with a mix of letters(atleast one upper and lower case alphabets), numbers & symbols");
+       }
+</script>
+</div>        
+</body>
+</html>    

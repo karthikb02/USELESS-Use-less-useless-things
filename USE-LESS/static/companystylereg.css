@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ddd6f3, #faaca8);
+    font-family: sans-serif;
+}
+.registerbox{
+    width:  370px;
+    height: 760px;
+    background: transparent;
+    color: #000;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    right: calc(130px);
+}
+h1{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.registerbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.registerbox input{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.registerbox input[type="text"], input[type="password"],input[type="tel"],input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color:#000;
+    font-size: 16px;
+    
+}
+.registerbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: blue;
+    color:#fff;
+    align-content: center;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.registerbox input[type="submit"]:hover
+{
+    cursor:pointer;
+    background: #ffc107;
+    color: #000;
+}
+.registerbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.registerbox a:hover
+{
+    color: #ffc107;
+}
+

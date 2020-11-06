@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>USE-LESS COMPANY LOGIN</title>
+	<link rel="icon" href="purchase bg.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel="stylesheet" type="text/css" href="static/companystyle.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body onload="noBack();" 
+	onpageshow="if (event.persisted) noBack();" onunload="">
+  <div class="loginbox">
+  <img src="static/company%20avatar.png" class="Avatar">
+      <h1 style="font-size: 25px;"><b>COMPANY LOGIN</b></h1>
+      <form action="purchase.html" method="POST">
+           <p>E-Mail ID</p>
+           <input type="email" type="text" placeholder="Enter E-Mail Id" required name="userName">
+           <p>Password</p>
+           <input type="password" type="text" placeholder="Enter New Password" required name="userPass" onclick="myFunction()" >
+           {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h6 style="color:red;font-size:15px">{{ message }}</h6>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+           <input type="submit" name="" value="Login">
+          <a href="companyforget.html">Forget password?</a><br>
+           <a href="companyRegister.html">Don't have an account</a>
+       </form> 
+      <script>
+      function myFunction() {
+      alert("Use 8 or more characters with a mix of letters(atleast one upper and lower case alphabets),numbers & symbols");
+      }
+     </script>
+      <SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+</SCRIPT>
+</div> 
+</body>
+</html>                                                                                     

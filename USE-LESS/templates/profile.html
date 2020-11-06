@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<title>USE-LESS Profile</title>
+<link rel="icon" href="sellingPageBg.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        color: black;
+        align-content: flex-start;
+        text-align: left;
+    }
+</style> 
+<body class="w3-black">
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-black w3-card-4">
+      <a href="homepage.html"><i class="fa fa-sign-out fa-fw w3-margin-right w3-xxlarge w3-text-teal">Logout</i></a>
+          
+        <div class="w3-display-container w3-center">
+            <h1 class="w3-xxlarge"><b>MY ACCOUNT</b></h1>
+          <img src="static/Avatar.png" style="width:50%;" alt="Avatar">
+        </div>
+        <div class="w3-container">
+          <h3><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>{{name}}</h3>
+          <h3><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>{{address}}</h3>
+            <h3><i class="fa fa-envelope fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>{{email}}</h3>
+          <h3><i class="fa fa-phone fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>{{mobile}}</h3>             
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+    <!-- Right Column -->
+    <div class="w3-half ">
+    
+      <div class="w3-container w3-center w3-card w3-black w3-margin-bottom">
+          <h1 class="w3-xxlarge"><b><I>WASTE DISCARDED</I></b></h1>
+    <div class="w3-row-padding" style="margin:0 -16px" id="My price">
+      <div class="w3-center">
+        <ul class="w3-ul w3-white w3-center">
+          <li class="w3-padding-30 w3-green"><b><I>BIO-DEGRADABLE</I></b>
+            <h2>{{bioDeg}} kg</h2>
+          </li>    
+          <li class="w3-padding-30 w3-red "><b><I>NON BIO-DEGRADABLE</I></b>
+            <h2>{{nonBioDeg}} kg</h2>
+          </li>    
+          <li class="w3-padding-16 w3-brown"><b><I>METAL</I></b>
+            <h2>{{metal}} kg</h2>
+          </li>              
+          <li class="w3-padding-16 w3-purple"><b><I>ELECTRONICS</I></b>
+            <h2>{{electronic}} kg</h2>
+          </li> 
+          <li class="w3-padding-16 w3-blue"><b><I>MEDICAL</I></b>   
+            <h2>{{medical}} kg</h2>
+          </li> 
+         <li class="w3-padding-16 w3-pink"><b><I>TOTAL WASTE DISCARDED</I></b> 
+         <h2>{{totalWaste}} kgs</h2>
+          </li>
+            <li class="w3-padding-16"><h2><b>TOTAL POINTS EARNED = {{points}}</b></h2> 
+          </li> 
+        </ul><br>
+         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-green w3-left-align" onclick="document.getElementById('id01').style.display='block'">REDEEM POINTS<i class="w3-padding fa fa-money"></i></a>
+        <div id="id01" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-indigo">
+       <span onclick="document.getElementById('id01').style.display='none'"
+       class="w3-button w3-indigo w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Send Request</h2>
+    </div>
+    <div class="w3-panel">
+	  <form action="/detailsPopup.html" method="POST">
+      <h4>Beneficiary Name</h4>
+      <input class="w3-input w3-border w3-margin-bottom" placeholder="eg.John" type="text" required name="name">
+      <h4>Account Number</h4>
+      <input class="w3-input w3-border w3-margin-bottom" placeholder="eg.1023100J028"  type="tel" required name="accNo">
+      <h4>Bank Name</h4>
+      <input class="w3-input w3-border w3-margin-bottom" placeholder="Indian Bank" type="text" required name="bankName">
+      <h4>Branch Name</h4>
+      <input class="w3-input w3-border w3-margin-bottom" placeholder="Mandaveli" type="text" required name="branch">
+      <h4>IFSC Code</h4>
+      <input class="w3-input w3-border w3-margin-bottom" placeholder="IDIB000J028" type="text" required name="ifsc">
+            <h4 style="text-align: center;"><b><I>1POINT = 1RUPEE</I></b></h4>   
+      <div class="w3-section">
+        <input type="submit" name="" value="SEND" class="w3-blue w3-padding-large"><br>
+      </div>   
+        </form>    
+    </div>
+  </div>
+   </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+  <footer class="w3-content w3-padding-30 w3-center w3-text-grey w3-xlarge">
+    <p class="w3-medium">For any queries contact<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=teamuseless2020@gmail.com&tf=1" target="_blank" class="w3-hover-text-green"> teamuseless2020 <i class="fa fa-envelope w3-hover-opacity"></i></a></p>
+ 
+  </footer>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+  </body>
+</html>
