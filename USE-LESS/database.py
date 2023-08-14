@@ -45,4 +45,3 @@ class DataBase:
     @staticmethod
     def get_date():
         return str(datetime.datetime.now()).split(" ")[0]
-
